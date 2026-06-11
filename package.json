@@ -1,0 +1,23 @@
+{
+  "name": "odin-recursion",
+  "version": "1.0.0",
+  "description": "This repository contains my solutions and experiments for the **Recursion Project** from [The Odin Project](https://www.theodinproject.com/lessons/javascript-recursion).   The goal is to strengthen understanding of recursion in JavaScript by solving classic problems and building reusable functions.",
+  "main": "fibonacci.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wolfSkullCave/Odin-Recursion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wolfSkullCave/Odin-Recursion/issues"
+  },
+  "homepage": "https://github.com/wolfSkullCave/Odin-Recursion#readme",
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
+}
