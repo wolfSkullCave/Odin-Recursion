@@ -1,15 +1,22 @@
-const fibonacci = function (n, result = [0, 1]) {
-  if (n < 0) throw new Error("ERROR: No negative numbers allowed.");
-  if (result.length >= n) return result.slice(0, n);
+function fibs(n) {
+  let result = [0, 1];
+  for (let i = 2; i < n; i++) {
+    console.log(i);
+    result[i] = result[i - 1] + result[i - 2];
+  }
 
-  result.push(result.at(-1) + result.at(-2));
-  console.log(result);
+  return result;
+}
 
-  return fibonacci(n, result);
-};
+function fibsRec(n, result = [0, 1], idx = 2) {
+  if (n === idx) return result;
 
-let testCase = fibonacci(8);
+  console.log("This was printed recursively");
+  result.push(result[idx - 1] + result[idx - 2]);
+  return fibsRec(n, result, idx + 1);
+}
 
-console.log(testCase);
+console.log(fibs(8));
+console.log(fibsRec(8));
 
-module.exports = fibonacci;
+export { fibs, fibsRec };

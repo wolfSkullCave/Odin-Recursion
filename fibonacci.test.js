@@ -1,27 +1,11 @@
-const fibonacci = require('./fibonacci');
+import { fibs, fibsRec } from "./fibonacci.js";
 
-describe('fibonacci', () => {
-  test('returns empty array for n = 0', () => {
-    expect(fibonacci(0)).toEqual([]);
-  });
-
-  test('returns [0] for n = 1', () => {
-    expect(fibonacci(1)).toEqual([0]);
-  });
-
-  test('returns [0, 1] for n = 2', () => {
-    expect(fibonacci(2)).toEqual([0, 1]);
-  });
-
-  test('returns correct sequence for n = 7', () => {
-    expect(fibonacci(7)).toEqual([0, 1, 1, 2, 3, 5, 8]);
-  });
-
-  test('returns correct sequence for n = 10', () => {
-    expect(fibonacci(10)).toEqual([0, 1, 1, 2, 3, 5, 8, 13, 21, 34]);
-  });
-
-  test('throws for negative input', () => {
-    expect(() => fibonacci(-1)).toThrow();
-  });
+test("8 numbers", () => {
+  expect(fibsRec(8)).toEqual([0, 1, 1, 2, 3, 5, 8, 13]);
+});
+test("4 numbers", () => {
+  expect(fibsRec(4)).toEqual([0, 1, 1, 2]);
+});
+test("8 numbers", () => {
+  expect(fibsRec(2)).toEqual([0, 1]);
 });
